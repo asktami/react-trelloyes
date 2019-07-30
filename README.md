@@ -1,3 +1,5 @@
+# react-trelloyes
+
 ## Assignment
 You are in a professional web development team as a React engineer. You're working on an app called Trelloyes. (It's very similar to an app you may be aware of called Trello.)
 
@@ -124,4 +126,3 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
-# react-trelloyes
