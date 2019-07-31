@@ -1,4 +1,7 @@
-const STORE = {
+// if exporting DEFAULT export, remove "export" from before const and at bottom of file add: export default STORE;
+
+// exporting named export
+export const STORE = {
 	lists: [
 		{
 			id: '1',
@@ -37,3 +40,6 @@ const STORE = {
 		'm': { id: 'm', title: 'Thirteenth card', content: 'lorem ipsum' },
 	},
 }
+
+// exporting default export
+// export default STORE;
