@@ -1,17 +1,21 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`List component tests renders the UI as expected with header = myHeader and allCards = ??? 1`] = `
+exports[`List component tests renders the UI as expected with cards array 1`] = `
 <section
   className="List"
 >
   <header
     className="List-header"
   >
-    <h2 />
+    <h2>
+      header=
+      myHeader
+    </h2>
   </header>
   <div
     className="List-cards"
   >
+    cards=
     <button
       className="List-add-button"
       type="button"

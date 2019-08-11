@@ -32,6 +32,8 @@ describe('Card component tests', () => {
    	2. Compare the rendered component to a saved version of the component
 	*/
 
+	// ***** QUESTION - pass string props inside curly quotes {} or not???
+
 	// add a test to perform a snapshot test on the Card component with the title prop set to myTitle and content prop set to myContent
 	it('renders the UI as expected with title = myTitle and content = myContent', () => {
 		const tree = renderer

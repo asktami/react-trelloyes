@@ -14,7 +14,15 @@ import { List } from './List';
 
 //this is the test suite
 describe('List component tests', () => {
-	const myCards = [];
+	//	const myCards = [];
+
+	// ***** QUESTION: how to pass an array of objects?
+
+	const myCards = [
+		{ id: 'a', title: 'First card', content: 'lorem ipsum' },
+		{ id: 'b', title: 'Second card', content: 'lorem ipsum' },
+		{ id: 'c', title: 'Third card', content: 'lorem ipsum' }
+	];
 
 	// smoke test:
 	it('renders without crashing', () => {
@@ -22,7 +30,7 @@ describe('List component tests', () => {
 		const div = document.createElement('div');
 
 		//render the component, this is the actual test, if something is wrong it will fail here
-		ReactDOM.render(<List />, div);
+		ReactDOM.render(<List cards={myCards} />, div);
 
 		//clean up code
 		ReactDOM.unmountComponentAtNode(div);
@@ -34,9 +42,23 @@ describe('List component tests', () => {
    	2. Compare the rendered component to a saved version of the component
 	*/
 
-	// add a test to perform a snapshot test on the List component with the header prop set to myHeader and the allCards set to ???
-	it('renders the UI as expected with header = myHeader and allCards = ???', () => {
-		const tree = renderer.create(<List cards={myCards} />).toJSON();
+	// add a test to perform a snapshot test on the List component with the header prop set to myHeader and the cards set to a new array
+	it('renders the UI as expected with cards array', () => {
+		const tree = renderer
+			.create(
+				<section className="List">
+					<header className="List-header">
+						<h2>header={'myHeader'}</h2>
+					</header>
+					<div className="List-cards">
+						cards={myCards}
+						<button type="button" className="List-add-button">
+							+ Add Random Card
+						</button>
+					</div>
+				</section>
+			)
+			.toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });
