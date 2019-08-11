@@ -20,10 +20,6 @@ describe('List component tests', () => {
 		{ id: 'c', title: 'Fifth card', content: 'lorem ipsum' }
 	];
 
-	const allCards = myCards.map(card => (
-		<Card key={card.id} title={card.title} content={card.content} />
-	));
-
 	// smoke test:
 	it('renders without crashing', () => {
 		// first create a DOM element to render the component into
