@@ -2,7 +2,8 @@ import React from 'react';
 import { Card } from './Card';
 import './List.css';
 
-{/*
+{
+	/*
 <section class="List">
 				<header class="List-header">
 					<h2>First list</h2>
@@ -18,20 +19,14 @@ import './List.css';
 					</button>
 				</div>
 </section>
-*/}
+*/
+}
 
 export class List extends React.Component {
-
 	render() {
-
-		const allCards = this.props.cards.map(card =>
-			<Card
-				key={card.id}
-				title={card.title}
-				content={card.content}
-			/>
-		)
-
+		const allCards = this.props.cards.map(card => (
+			<Card key={card.id} title={card.title} content={card.content} />
+		));
 
 		return (
 			<section className="List">
@@ -42,9 +37,9 @@ export class List extends React.Component {
 					{allCards}
 					<button type="button" className="List-add-button">
 						+ Add Random Card
-				</button>
+					</button>
 				</div>
 			</section>
-		)
+		);
 	}
 }
