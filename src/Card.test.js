@@ -12,7 +12,7 @@ import renderer from 'react-test-renderer';
 //make the Card component available
 import { Card } from './Card';
 
-//this is the test case
+//this is the test suite
 describe('Card component tests', () => {
 	// smoke test:
 	it('renders without crashing', () => {

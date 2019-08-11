@@ -9,14 +9,21 @@ import ReactDOM from 'react-dom';
 // npm install react-test-renderer -D
 import renderer from 'react-test-renderer';
 
-//make the Card component available
-import { Card } from './Card';
-
 //make the List component available
 import { List } from './List';
 
-//this is the test case
+//this is the test suite
 describe('List component tests', () => {
+	const myCards = [
+		{ id: 'a', title: 'First card', content: 'lorem ipsum' },
+		{ id: 'b', title: 'Second card', content: 'lorem ipsum' },
+		{ id: 'c', title: 'Fifth card', content: 'lorem ipsum' }
+	];
+
+	const allCards = myCards.map(card => (
+		<Card key={card.id} title={card.title} content={card.content} />
+	));
+
 	// smoke test:
 	it('renders without crashing', () => {
 		// first create a DOM element to render the component into
@@ -41,11 +48,11 @@ describe('List component tests', () => {
 			.create(
 				<section name="List">
 					<header name="List-header">
-						<h2>header={'myHeader'}</h2>
+						<h2>header={'myListHeader'}</h2>
 					</header>
-					<div name="List-cards">
-						{allCards}
-						<button type="button" name="List-add-button">
+					<div className="List-cards">
+						<List key={1} header={'thisTitle'} cards={myCards} />
+						<button type="button" className="List-add-button">
 							+ Add Random Card
 						</button>
 					</div>
