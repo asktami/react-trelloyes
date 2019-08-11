@@ -14,11 +14,7 @@ import { List } from './List';
 
 //this is the test suite
 describe('List component tests', () => {
-	const myCards = [
-		{ id: 'a', title: 'First card', content: 'lorem ipsum' },
-		{ id: 'b', title: 'Second card', content: 'lorem ipsum' },
-		{ id: 'c', title: 'Fifth card', content: 'lorem ipsum' }
-	];
+	const myCards = [];
 
 	// smoke test:
 	it('renders without crashing', () => {
@@ -40,18 +36,7 @@ describe('List component tests', () => {
 
 	// add a test to perform a snapshot test on the List component with the header prop set to myHeader and the allCards set to ???
 	it('renders the UI as expected with header = myHeader and allCards = ???', () => {
-		const tree = renderer
-			.create(
-				<section name="List">
-					<header name="List-header">
-						<h2>header={'myListHeader'}</h2>
-					</header>
-					<div className="List-cards">
-						<List cards={myCards} />
-					</div>
-				</section>
-			)
-			.toJSON();
+		const tree = renderer.create(<List cards={myCards} />).toJSON();
 		expect(tree).toMatchSnapshot();
 	});
 });
