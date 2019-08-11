@@ -14,9 +14,8 @@ import { List } from './List';
 
 //this is the test suite
 describe('List component tests', () => {
-	//	const myCards = [];
-
-	// ***** QUESTION: how to pass an array of objects?
+	// can also test with an empty array:
+	// const myCards = [];
 
 	const myCards = [
 		{ id: 'a', title: 'First card', content: 'lorem ipsum' },
@@ -51,7 +50,7 @@ describe('List component tests', () => {
 						<h2>header={'myHeader'}</h2>
 					</header>
 					<div className="List-cards">
-						cards={myCards}
+						<List cards={myCards} />
 						<button type="button" className="List-add-button">
 							+ Add Random Card
 						</button>

@@ -15,7 +15,70 @@ exports[`List component tests renders the UI as expected with cards array 1`] = 
   <div
     className="List-cards"
   >
-    cards=
+    <section
+      className="List"
+    >
+      <header
+        className="List-header"
+      >
+        <h2 />
+      </header>
+      <div
+        className="List-cards"
+      >
+        <div
+          className="Card"
+        >
+          <button
+            type="button"
+          >
+            delete
+          </button>
+          <h3>
+            First card
+          </h3>
+          <p>
+            lorem ipsum
+          </p>
+        </div>
+        <div
+          className="Card"
+        >
+          <button
+            type="button"
+          >
+            delete
+          </button>
+          <h3>
+            Second card
+          </h3>
+          <p>
+            lorem ipsum
+          </p>
+        </div>
+        <div
+          className="Card"
+        >
+          <button
+            type="button"
+          >
+            delete
+          </button>
+          <h3>
+            Third card
+          </h3>
+          <p>
+            lorem ipsum
+          </p>
+        </div>
+        <button
+          className="List-add-button"
+          type="button"
+        >
+          + Add Random Card
+        </button>
+      </div>
+    </section>
     <button
       className="List-add-button"
       type="button"
