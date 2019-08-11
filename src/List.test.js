@@ -47,10 +47,7 @@ describe('List component tests', () => {
 						<h2>header={'myListHeader'}</h2>
 					</header>
 					<div className="List-cards">
-						<List key={1} header={'thisTitle'} cards={myCards} />
-						<button type="button" className="List-add-button">
-							+ Add Random Card
-						</button>
+						<List cards={myCards} />
 					</div>
 				</section>
 			)
