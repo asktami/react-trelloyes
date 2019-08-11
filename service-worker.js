@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/react-trelloyes/precache-manifest.fc48a6f8c8c04da3e7e3d0e19e7b5bea.js"
+  "/react-trelloyes/precache-manifest.53cc630616f0d23ba8bdfcd405b5a2c9.js"
 );
 
 self.addEventListener('message', (event) => {
