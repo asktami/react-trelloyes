@@ -42,6 +42,9 @@ describe('List component tests', () => {
 	*/
 
 	// add a test to perform a snapshot test on the List component with the header prop set to myHeader and the cards set to a new array
+	
+	// List component expects a prop named cards (this.props.cards) which is an array of objects with the keys id, title and content
+	
 	it('renders the UI as expected with cards array', () => {
 		const tree = renderer
 			.create(
