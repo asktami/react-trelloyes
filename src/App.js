@@ -94,7 +94,16 @@ export class App extends React.Component {
 
 	render() {
 		const { store } = this.state;
-		console.log('app store = ' + JSON.stringify(store));
+		console.log('app store.lists = ' + JSON.stringify(store.lists));
+		console.log('app store.allCards = ' + JSON.stringify(store.allCards));
+
+		//for onAddCard
+		// KEY is a reserverd word
+		// so can NOT pass this.props.key in List.js,
+		// onClick={this.props.onAddCard(this.props.key)}
+		// would need to create another props called id with same value
+		// to be able to pass this.props.id in List.js
+		// for the App.js handleAddRandom function argument ListID
 
 		const lists = store.lists.map(item => (
 			<List
@@ -103,7 +112,7 @@ export class App extends React.Component {
 				cards={item.cardIds.map(id => store.allCards[id])}
 				/* add the two callback props here */
 				onDeleteCard={this.handleDeleteCard}
-				onAddCard={this.handleAddRandom}
+				onAddCard={this.handleAddRandom(item.id)}
 			/>
 		));
 

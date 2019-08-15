@@ -45,7 +45,7 @@ export class List extends React.Component {
 					{allCards}
 					<button
 						/* use a callback props here */
-						onClick={this.props.onAddCard(this.props.key)}
+						onClick={this.props.onAddCard}
 						type="button"
 						className="List-add-button"
 					>
