@@ -40,8 +40,8 @@ describe('Card component tests', () => {
 			.create(
 				<div name="Card">
 					<button type="button">delete</button>
-					<h3>title={'myTitle'}}</h3>
-					<p>content='myContent'</p>
+					<h3>title={'myTitle'}</h3>
+					<p>content={'myContent'}</p>
 				</div>
 			)
 			.toJSON();
